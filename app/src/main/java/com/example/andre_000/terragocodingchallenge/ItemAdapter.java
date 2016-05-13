@@ -41,12 +41,6 @@ public class ItemAdapter extends ArrayAdapter<Item>
         TextView lastName = (TextView)rowView.findViewById(R.id.lastNameLbl);
         TextView username = (TextView)rowView.findViewById(R.id.usernameLbl);
 
-        //Making font sizes responsive on all screen sizes
-        /*userID.setTextSize(TypedValue.COMPLEX_UNIT_PX, 20);
-        firstName.setTextSize(TypedValue.COMPLEX_UNIT_PX, 20);
-        lastName.setTextSize(TypedValue.COMPLEX_UNIT_PX, 20);
-        username.setTextSize(TypedValue.COMPLEX_UNIT_PX, 20);*/
-
         if(position == 0)
         {
             setTextViews(userID, firstName, lastName, username, position);

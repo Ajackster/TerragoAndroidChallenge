@@ -21,18 +21,14 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ItemAdapter adapter = new ItemAdapter(this, generateData());
+        ItemAdapter adapter = new ItemAdapter(this, generateUserData());
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
 
-        TextView chckOutTableTxt = (TextView) findViewById(R.id.chckOutTableTxt);
-        TextView prettyCoolTxt = (TextView) findViewById(R.id.prettyCoolTxt);
-        //chckOutTableTxt.setTextSize(TypedValue.COMPLEX_UNIT_PX, 30);
-        //prettyCoolTxt.setTextSize(TypedValue.COMPLEX_UNIT_PX, 25);
-
     }
 
-    private ArrayList<Item> generateData()
+    //Generating the rows
+    private ArrayList<Item> generateUserData()
     {
         ArrayList<Item> items = new ArrayList<Item>();
         for(int x = 0; x < userID.length; x++) {
